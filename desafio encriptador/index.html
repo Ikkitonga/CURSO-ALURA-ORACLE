@@ -15,18 +15,14 @@
     <main>
         <div class="">
             <p>Ingrese el texto a encriptar</p>
-            <textarea name="ingreso" id="ingreso" cols="50" rows="10"></textarea>
+            <textarea name="ingreso" id="ingreso" cols="50" rows="10" oninput="encriptacion()"></textarea>
         </div>
 
         <div class="botones">
-            <button class="boton">Encriptar</button>
-            <button class="boton">Desencriptar</button>
+            <button id="btn-encriptar" class="boton" onclick="encriptacion()">Encriptar</button>
+            <button id="btn-desencriptar" class="boton">Desencriptar</button>
         </div>
 
-        <div class="">
-            <p>Este es el texto encriptado</p>
-            <textarea name="egreso" id="egreso" cols="50" rows="10"></textarea>
-        </div>
     </main>
 
     <footer>

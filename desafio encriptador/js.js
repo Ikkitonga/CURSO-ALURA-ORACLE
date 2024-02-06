@@ -23,34 +23,60 @@ Extra
     "copiar" del menú de las aplicaciones.
 */
 
+/* control con js de caja de texto y botones */
 
-// Variables
+let cajaEncriptar = document.getElementById("ingreso");
+let botonEncriptar = document.getElementById("btn-encriptar");
+let botonDesencriptar = document.getElementById("btn-desencriptar");
 
-let palabraAEncriptar = prompt("Por favor ingrese un texto a encriptar");
 
-// utilizo el metodo de string replace para remplazar la vocal y con switch le doy las condiciones
 
-let palabraEncriptada = palabraAEncriptar.replace(/[aeiou]/g, function (match) {
-    switch (match) {
-        case "a":
-            return "ai";
-            break;
-        case "e":
-            return "enter";
-            break;
-        case "i":
-            return "imes";
-            break;
-        case "o":
-            return "ober";
-            break;
-        case "u":
-            return "ufat";
-            break;
-    }
-});
 
-console.log(palabraEncriptada)
+function encriptado(){ 
+    botonEncriptar.addEventListener("click", encriptacion());
+}
+
+function encriptacion() {
+    /* en la funcion encriptacion utilizo el metodo de string replace para remplazar 
+    la vocal y con switch le doy las condiciones*/
+
+    let palabraAEncriptar = cajaEncriptar.value;
+
+    let palabraEncriptada = palabraAEncriptar.replace(/[aeiou]/g, function (match) {
+        switch (match) {
+            case "a":
+                return "ai";
+                break;
+            case "e":
+                return "enter";
+                break;
+            case "i":
+                return "imes";
+                break;
+            case "o":
+                return "ober";
+                break;
+            case "u":
+                return "ufat";
+                break;
+        }
+    })
+     console.log(palabraEncriptada)
+}
+
+encriptacion();
+
+
+
+
+/* a proximos dias dejamos la funcion desencriptar en si deberia funcionar al reves
+que encriptacion las dudas que tengo son que variable uso y como le digo al replace
+por que antes tenia letras pero ahora tengo palabras */
+
+// function desencriptar(){
+//     let desencritado = palabraEncriptada.replace()
+// }
+
 
 
 

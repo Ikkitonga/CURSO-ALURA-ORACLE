@@ -25,6 +25,11 @@ main {
     margin-top: 5rem;
 }
 
+#ingreso {
+    border: 1rem solid rgba(150,55,200, 0.9);
+    border-radius: 1rem;
+}
+
 .botones{
     display: flex;
     flex-direction: column;
