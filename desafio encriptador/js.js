@@ -24,12 +24,32 @@ Extra
 */
 
 
+// Variables
 
+let palabraAEncriptar = "buhero negra";
 
+// utilizo el metodo de string replace para remplazar la vocal y con switch le doy las condiciones
 
-
-
-
+let palabraEncriptada = palabraAEncriptar.replace(/[aeiou]/g, function (match) {
+    switch (match) {
+        case "a":
+            return "ai";
+            break;
+        case "e":
+            return "enter";
+            break;
+        case "i":
+            return "imes";
+            break;
+        case "o":
+            return "ober";
+            break;
+        case "u":
+            return "ufat";
+            break;
+    }
+});
+console.log(palabraEncriptada)
 
 
 
