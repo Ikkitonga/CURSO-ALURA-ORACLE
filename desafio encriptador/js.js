@@ -26,7 +26,7 @@ Extra
 
 // Variables
 
-let palabraAEncriptar = "buhero negra";
+let palabraAEncriptar = prompt("Por favor ingrese un texto a encriptar");
 
 // utilizo el metodo de string replace para remplazar la vocal y con switch le doy las condiciones
 
@@ -49,6 +49,7 @@ let palabraEncriptada = palabraAEncriptar.replace(/[aeiou]/g, function (match) {
             break;
     }
 });
+
 console.log(palabraEncriptada)
 
 
