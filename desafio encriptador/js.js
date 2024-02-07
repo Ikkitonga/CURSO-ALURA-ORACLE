@@ -28,6 +28,17 @@ Extra
 let cajaEncriptar = document.getElementById("ingreso");
 let botonEncriptar = document.getElementById("btn-encriptar");
 let botonDesencriptar = document.getElementById("btn-desencriptar");
+let tituloDinamico = document.getElementById("titulo");
+
+
+/* generacion de titulo dinamico*/
+
+function titulo(){
+    tituloDinamico.innerHTML = "Desafio Encriptador";
+}
+
+titulo()
+
 
 
 
@@ -42,7 +53,7 @@ function encriptacion() {
 
     let palabraAEncriptar = cajaEncriptar.value;
 
-    let palabraEncriptada = palabraAEncriptar.replace(/[aeiou]/g, function (match) {
+    let palabraEncriptada = palabraAEncriptar.toLowerCase().replace(/[aeiou]/g, function (match) {
         switch (match) {
             case "a":
                 return "ai";

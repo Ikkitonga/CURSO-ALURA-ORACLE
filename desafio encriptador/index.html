@@ -9,18 +9,21 @@
 <body>
     <header>
         <img src="https://cdn-icons-png.flaticon.com/512/5602/5602097.png" alt="signo de pregunta">
-        <h1>Encriptador</h1>
+        <h1 id="titulo"></h1>
     </header>
 
     <main>
         <div class="">
-            <p>Ingrese el texto a encriptar</p>
+            <p id="parrafo">Ingrese el texto a encriptar</p>
             <textarea name="ingreso" id="ingreso" cols="50" rows="10" oninput="encriptacion()"></textarea>
         </div>
 
         <div class="botones">
             <button id="btn-encriptar" class="boton" onclick="encriptacion()">Encriptar</button>
             <button id="btn-desencriptar" class="boton">Desencriptar</button>
+        </div>
+        <div>
+            <button id="btn-copiar" class="boton">Copie el texto</button>
         </div>
 
     </main>
