@@ -32,23 +32,42 @@ main {
 }
 
 #ingreso {
+    background-image: linear-gradient(90deg, #c07bf0, #09f, #00ddff);
     border: 0;
     background-color: rgb(218, 241, 241);
-    font-size: medium;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    width: 27rem;
+    text-align: left;
     
 }
 
-.botones{
+ .botones{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .boton {
-    padding: 5px 15px 5px 15px;
-    width: 10rem;
-    margin: 1rem;
-    font-size: 1rem;
+    border: 0;
+    background-image: linear-gradient(150deg, #9500ff, #09f, #00ddff);
+    border-radius: 8px;
+    color: #040404;
+    display: flex;
+    font-size: 20px;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: linear-gradient(-150deg, #9500ff, #09f, #00ddff);
+}
+
+.boton:active {
+    transform: scale(0.9);
 }
