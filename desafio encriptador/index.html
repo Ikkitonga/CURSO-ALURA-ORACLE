@@ -14,13 +14,14 @@
 
     <main>
         <div class="">
-            <p id="parrafo">Ingrese el texto a encriptar</p>
-            <textarea name="ingreso" id="ingreso" cols="50" rows="10" oninput="encriptacion()"></textarea>
+            <p id="parrafo"></p>
+
+            <textarea name="ingreso" id="ingreso" cols="50" rows="5" oninput="encriptacion()"></textarea>
         </div>
 
         <div class="botones">
-            <button id="btn-encriptar" class="boton" onclick="encriptacion()">Encriptar</button>
-            <button id="btn-desencriptar" class="boton">Desencriptar</button>
+            <button id="btn-encriptar" class="boton" onclick="encriptado()">Encriptar</button>
+            <button id="btn-desencriptar" class="boton" onclick="desencriptado()">Desencriptar</button>
         </div>
         <div>
             <button id="btn-copiar" class="boton">Copie el texto</button>
