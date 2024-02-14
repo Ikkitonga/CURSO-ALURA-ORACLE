@@ -23,34 +23,44 @@ Extra
     "copiar" del menú de las aplicaciones.
 */
 
-/* control con js de caja de texto y botones */
+/* control con js de caja de texto, botones y textos*/
 
 let cajaEncriptar = document.getElementById("ingreso");
 let botonEncriptar = document.getElementById("btn-encriptar");
 let botonDesencriptar = document.getElementById("btn-desencriptar");
 let tituloDinamico = document.getElementById("titulo");
+let instructivo = document.getElementById("parrafo");
 
 
 /* generacion de titulo dinamico*/
 
-function titulo(){
+function titulo() {
     tituloDinamico.innerHTML = "Desafio Encriptador";
+    instructivo.innerHTML = "Ingrese una palabra o frase y toque el boton Encriptar";
 }
 
 titulo()
 
 
-
-
-
-function encriptado(){ 
-    botonEncriptar.addEventListener("click", encriptacion());
+function encriptado() {
+    if (cajaEncriptar.value == "") {
+        alert("ingrese una palabra o frase");
+        return;
+    }
+    let encriptado = encriptacion();
+    document.getElementById("ingreso").value = encriptado;
 }
+
+function desencriptado() {
+
+    let desencriptado = desencriptar();
+    document.getElementById("ingreso").value = desencriptado;
+}
+
 
 function encriptacion() {
     /* en la funcion encriptacion utilizo el metodo de string replace para remplazar 
     la vocal y con switch le doy las condiciones*/
-
     let palabraAEncriptar = cajaEncriptar.value;
 
     let palabraEncriptada = palabraAEncriptar.toLowerCase().replace(/[aeiou]/g, function (match) {
@@ -72,7 +82,7 @@ function encriptacion() {
                 break;
         }
     })
-     console.log(palabraEncriptada)
+    return palabraEncriptada;
 }
 
 encriptacion();
@@ -84,17 +94,21 @@ encriptacion();
 que encriptacion las dudas que tengo son que variable uso y como le digo al replace
 por que antes tenia letras pero ahora tengo palabras */
 
-// function desencriptar(){
-//     let desencritado = palabraEncriptada.replace()
-// }
+function desencriptar() {
 
+    let palabraEncriptada = cajaEncriptar.value;
 
+    let palabraDesencriptada = palabraEncriptada.toLowerCase()
+        .replace(/enter/gi, "e")
+        .replace(/ober/gi, "o")
+        .replace(/imes/gi, "i")
+        .replace(/ai/gi, "a")
+        .replace(/ufat/gi, "u");
 
+    return palabraDesencriptada;
+}
 
-
-
-
-
+desencriptar()
 
 
 
