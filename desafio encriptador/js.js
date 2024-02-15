@@ -28,6 +28,7 @@ Extra
 let cajaEncriptar = document.getElementById("ingreso");
 let botonEncriptar = document.getElementById("btn-encriptar");
 let botonDesencriptar = document.getElementById("btn-desencriptar");
+let botonCopiar = document.getElementById("btn-copiar");
 let tituloDinamico = document.getElementById("titulo");
 let instructivo = document.getElementById("parrafo");
 
@@ -35,29 +36,48 @@ let instructivo = document.getElementById("parrafo");
 /* generacion de titulo dinamico*/
 
 function titulo() {
-    tituloDinamico.innerHTML = "Desafio Encriptador";
-    instructivo.innerHTML = "Ingrese una palabra o frase y toque el boton Encriptar";
+    tituloDinamico.innerHTML = "Desafio Encriptador Alura-Oracle";
+    instructivo.innerHTML = "Ingrese una palabra o frase y toque el boton Encriptar, en caso que tenga un mensaje ya encriptado debe pulsar el boton Desencriptar";
 }
 
 titulo()
 
 
+/* funciones para botones de encriptar y desencriptar y copiar*/
+
+/* funcion para encriptar */
 function encriptado() {
     if (cajaEncriptar.value == "") {
-        alert("ingrese una palabra o frase");
+        alert("Ingrese una palabra o frase");
         return;
     }
     let encriptado = encriptacion();
     document.getElementById("ingreso").value = encriptado;
 }
 
-function desencriptado() {
 
+/* funcion para desencriptar */
+function desencriptado() {
+    if (cajaEncriptar.value == "") {
+        alert("Ingrese una palabra o frase encriptada");
+        return;
+    }
     let desencriptado = desencriptar();
     document.getElementById("ingreso").value = desencriptado;
 }
 
 
+/* funcion para copiar el texto de la caja */
+function copiadoDeTexto(){
+    let textoCopiado = document.getElementById("ingreso").value;
+    let botonCopiar = document.getElementById("btn-copiar");
+
+    navigator.clipboard.writeText(textoCopiado);
+    alert("texto copiado");
+}
+
+
+/* funcion con la logica de encriptar */
 function encriptacion() {
     /* en la funcion encriptacion utilizo el metodo de string replace para remplazar 
     la vocal y con switch le doy las condiciones*/
@@ -88,11 +108,7 @@ function encriptacion() {
 encriptacion();
 
 
-
-
-/* a proximos dias dejamos la funcion desencriptar en si deberia funcionar al reves
-que encriptacion las dudas que tengo son que variable uso y como le digo al replace
-por que antes tenia letras pero ahora tengo palabras */
+/* funcion con la logica de desencriptar */
 
 function desencriptar() {
 
