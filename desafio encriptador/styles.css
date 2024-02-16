@@ -57,7 +57,7 @@ main {
     resize: none;
     font-size: 20px;
     line-height: 1.5;
-    
+
 }
 
 .contenedorUno-parrafos-botones {
@@ -65,7 +65,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+
 }
 
 .contenedorUno-parrafos {
@@ -76,13 +76,13 @@ main {
 }
 
 .material-symbols-outlined {
-    font-size:  35px !important;
+    font-size: 30px !important;
 }
 
 #aviso {
     color: red;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-top: 1rem;
     display: flex;
     align-items: center;
@@ -94,13 +94,13 @@ main {
 
 .botones {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
 }
 
 .boton {
     border: 0;
-    background-image: linear-gradient(150deg, #9500ff, #09f, #00ddff);
+    background-image: linear-gradient(150deg, #d0a7ee, rgb(137, 192, 230), #00ddff);
     border-radius: 8px;
     color: #040404;
     font-size: 20px;
@@ -132,11 +132,109 @@ main {
 
 /* ESTILOS PARA DISPOSITIVOS DE 1024px*/
 
+@media only screen and (max-width: 1024px) {
+    .contenedorUno-parrafos {
+        height: auto;
+    }
 
+    #parrafo {
+        font-size: 1rem;
+    }
+
+    #aviso {
+        font-size: 1rem;
+    }
+
+    .boton {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        height: 8.4vh;
+    }
+}
 
 /* ESTILOS PARA TABLET 768px*/
 
+@media only screen and (max-width: 768px) {
 
+
+    main {
+        height: auto;
+    }
+
+    #parrafo {
+        font-size: 1rem;
+    }
+
+    #aviso {
+        font-size: 0.8rem;
+    }
+
+    .boton {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        font-weight: 500;
+    }
+
+}
 
 
 /* ESTILOS PARA CELULARES 320px*/
+
+@media only screen and (max-width: 320px) {
+
+    header {
+        margin: 1rem;
+    }
+
+    img {
+        display: none
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    main {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .contenedorUno {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .paper {
+        width: 90vw;
+    }
+
+    .ingreso {
+        width: 100%;
+        height: 300px;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .contenedorUno-parrafos {
+        height: fit-content;
+    }
+
+    #parrafo {
+        font-size: 0.6rem;
+    }
+
+    #aviso {
+        font-size: 0.6rem;
+    }
+
+    .parrafoFooter {
+        font-size: 0.6rem;
+    }
+
+}
